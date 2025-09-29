@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Pages - صفحاتنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #183153;
+            position: relative;
+            overflow: hidden;
+        }
+        /* خطوط متحركة بالخلفية */
+        .animated-lines {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .line {
+            position: absolute;
+            width: 180vw;
+            height: 4px;
+            background: linear-gradient(90deg, #183153 80%, #27408b 100%);
+            opacity: 0.15;
+            border-radius: 2px;
+            animation: moveLines 9s linear infinite;
+        }
+        .line:nth-child(1) { top: 20%; left: -60vw; animation-delay: 0s;}
+        .line:nth-child(2) { top: 35%; left: -80vw; animation-delay: 2s;}
+        .line:nth-child(3) { top: 50%; left: -70vw; animation-delay: 4s;}
+        .line:nth-child(4) { top: 70%; left: -90vw; animation-delay: 6s;}
+        @keyframes moveLines {
+            0%   { left: -100vw; }
+            100% { left: 100vw; }
+        }
+
+        .container {
+            background: linear-gradient(125deg, #ffffff 80%, #ffe5b5 100%);
+            padding: 44px 30px 40px 30px;
+            border-radius: 22px;
+            box-shadow: 0 8px 32px rgba(24,49,83,0.13), 0 2px 8px rgba(255,136,0,0.08);
+            max-width: 420px;
+            width: 95%;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+        .top-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
+            margin-bottom: 18px;
+        }
+        .icon-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            width: 70px;
+        }
+        .icon-block img {
+            width: 42px;
+            height: 42px;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px #ffa50030;
+            background: #f8f8fa;
+            padding: 6px;
+            margin-bottom: 0;
+            display: block;
+        }
+        .icon-title {
+            font-size: 1em;
+            color: #183153;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+        }
+        h1 {
+            color: #183153;
+            font-size: 2.7em;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 8px #18315322;
+            text-align: center; /* تم إضافة هذه الخاصية لجعل العنوان بالمنتصف */
+        }
+        .welcome {
+            font-size: 1.17em;
+            color: #183153cc;
+            margin-bottom: 26px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-shadow: 0 1px 4px #ff88003a;
+            text-align: center;
+        }
+        .link-button {
+            display: block;
+            margin-bottom: 18px;
+            padding: 18px 0;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 14px;
+            font-size: 1.25em;
+            font-weight: bold;
+            transition: background 0.28s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.25s;
+            box-shadow: 0 2px 10px #ff880038, 0 1px 3px #18315318;
+            position: relative;
+            text-align: center;
+        }
+        .link-button:active {
+            transform: scale(0.97);
+        }
+        .instagram-btn {
+            background: linear-gradient(90deg, #ff8800 15%, #ff6600 85%);
+            border: none;
+        }
+        .instagram-btn:hover, .instagram-btn:focus {
+            background: linear-gradient(90deg, #ffa500 0%, #ff8800 100%);
+            transform: scale(1.04);
+            box-shadow: 0 2px 16px #ff880080;
+        }
+        .facebook-btn {
+            background: linear-gradient(90deg, #183153 15%, #27408b 90%);
+            border: none;
+        }
+        .facebook-btn:hover, .facebook-btn:focus {
+            background: linear-gradient(90deg, #27408b 0%, #183153 100%);
+            transform: scale(1.04);
+            box-shadow: 0 2px 16px #18315380;
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 7px 24px 7px;
+                border-radius: 14px;
+                max-width: 98vw;
+            }
+            h1 { font-size: 2em; }
+            .welcome { font-size: 1em; }
+            .icon-block img { width: 28px; height: 28px; }
+            .icon-block { width: 45px; }
+            .link-button { padding: 13px 0; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <!-- خطوط متحركة كحلية بالخلفية -->
+    <div class="animated-lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="container">
+        <div class="top-icons">
+            <!-- أيقونة طائرة سفر -->
+            <div class="icon-block">
+                <img src="https://cdn-icons-png.flaticon.com/512/854/854894.png" alt="Plane">
+                <span class="icon-title">Travel</span>
+            </div>
+            <!-- أيقونة إنستغرام -->
+            <div class="icon-block">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                <span class="icon-title">Instagram</span>
+            </div>
+            <!-- أيقونة فيسبوك -->
+            <div class="icon-block">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                <span class="icon-title">Facebook</span>
+            </div>
+        </div>
+        <h1>Sky Leader</h1>
+        <div class="welcome">تابع صفحاتنا الرسمية واكتشف الريادة والسفر والتجارب المميزة.</div>
+        
+        <a href="https://www.instagram.com/sky.leaders.agency?igsh=emFtNGNjeWw5MDl0" class="link-button instagram-btn" target="_blank">
+            Instagram
+        </a>
+
+        <a href="https://www.facebook.com/share/17BGmmb7an/" class="link-button facebook-btn" target="_blank">
+            Facebook
+        </a>
+        
+    </div>
+
+</body>
+</html>
